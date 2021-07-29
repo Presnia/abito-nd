@@ -94,7 +94,8 @@ body {
     margin-left: 5px;
 }
 
-.page-content {
+.page-content,
+.page-content-single {
     margin-top: 12px;
     display: grid;
     grid-template-columns: 9fr 3fr;
@@ -395,11 +396,56 @@ body {
     .card-image {
         width: 100%;
     }
+
+    .page-content-single {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-single {
+        justify-content: space-between;
+    }
+
+    .author {
+        min-width: 464px;
+    }
+
+    .side-bar-single {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .footer {
+        margin-top: 0;
+    }
+
+    hr {
+        display: none;
+    }
+
+    .banners {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
 }
 
 @media (max-width: 1020px) {
     .container {
         width: 860px;
+    }
+
+    .main-single {
+        flex-direction: column;
+    }
+
+    .author {
+        margin-left: 0;
+    }
+
+    .author-wrapper {
+        max-width: 30%;
     }
 }
 
@@ -474,6 +520,14 @@ body {
         display: flex;
         flex-direction: column;
     }
+
+    .banners {
+        justify-content: space-between;
+    }
+
+    .author-wrapper {
+        max-width: 40%;
+    }
 }
 
 @media (max-width: 576px) {
@@ -495,5 +549,24 @@ body {
 
     .search-button_name {
         display: none;
+    }
+
+    .banners {
+        margin: auto;
+    }
+
+    .first-banner img,
+    .second-banner img {
+        width: 98%;
+    }
+
+    .author-wrapper {
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 510px) {
+    .button-group {
+        max-width: 100%;
     }
 }
