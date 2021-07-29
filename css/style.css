@@ -55,6 +55,15 @@ body {
     cursor: pointer;
 }
 
+.button:active {
+    transform: scale(0.98);
+}
+
+.button:hover {
+    opacity: 0.7;
+    color: tomato;
+}
+
 .button-link {
     color: inherit;
 }
